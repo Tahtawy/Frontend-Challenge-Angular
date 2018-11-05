@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="githubApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Roboto Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
+    <!-- Page Style -->
+    <link rel="stylesheet" href="../css/pages/users.css">
+
+    <!-- Angular Liberary -->
+    <script src="../node_modules/angular/angular.min.js"></script>
+
+    <!-- Angular Development Files -->
+    <script src="../scripts/app.js"></script>
+
+</head>
+<body>
+
+    <!-- Start Navigation Bar -->
+    <nav class="navigation-bar">
+
+        <a href="#" class="navigation-bar__logo">
+            <img src="../images/logo.png" alt="logo-image" class="navigation-bar__image">
+            <strong>Git</strong>Hub
+        </a>
+
+        <button class="navigation-bar__toggler" type="button" data-toggle="collapse" data-target="#collapseArea" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="collapseArea" class="navbar-collapse collapse">
+            <ul class="navigation-list">
+                <li class="navigation-list__item navigation-list--active">
+                    <a href="" class="navigation-list__link">Home</a>
+                </li>
+                <li class="navigation-list__item">
+                    <a href="" class="navigation-list__link">Users</a>
+                </li>
+                <li class="navigation-list__item">
+                    <a href="" class="navigation-list__link">About</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav> 
+    <!-- End Navigation Bar -->
+
+    <main class="main">
+        
+        <!-- Start Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar__title">
+                <h3 class="sidebar__h3">users list</h3>
+            </div>
+
+            <ul class="sidebar__users-list">
+                <li class="sidebar__user-item sidebar--active-user">
+                    <img src="../images/avatar.png" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">mohammed galal</span>
+                </li>
+                <li class="sidebar__user-item">
+                    <img src="../images/avatar2.png" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">mohammed galal</span>
+                </li>
+                <li class="sidebar__user-item">
+                    <img src="../images/avatar3.jpeg" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">mohammed galal</span>
+                </li>
+                <li class="sidebar__user-item">
+                    <img src="../images/avatar4.jpeg" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">mohammed galal</span>
+                </li>
+                <li class="sidebar__user-item">
+                    <img src="../images/avatar5.jpeg" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">mohammed galal</span>
+                </li>
+                <li class="sidebar__user-item">
+                    <img src="../images/avatar6.jpeg" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">mohammed galal</span>
+                </li>
+            </ul>
+
+            <div class="sidebar__load-more">
+                <button class="btn btn-primary">Load More</button>
+            </div>
+
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Start User's Details -->
+        <section class="user-details">
+
+            <div class="user-details__title">
+                <h3 class="user-details__h3">user's details</h3>
+            </div>
+
+            <div class="user-details__body">
+                <img src="../images/avatar.png" alt="user-details-avatar" class="user-details__image">
+                <div class="name-and-id">
+                    <p class="user-details__name">mohammed galal</p>
+                    <em class="user-details__id">@id:12345</em>
+                </div>
+                <div class="user-details__email">
+                    <label class="user-details__label">email:</label>
+                    <span class="user-details__value">mght29@gmail.com</span>
+                </div>
+                <div class="user-details__created-at">
+                    <label class="user-details__label">created at:</label>
+                    <span class="user-details__value">2012-06-07</span>
+                </div>
+            </div>
+
+        </section>
+        <!-- End User's Details -->
+
+    </main>
+
+</body>
+</html>

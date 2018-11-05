@@ -1,0 +1,7 @@
+.footer {
+    @extend .text-center;
+    @extend .text-capitalize;
+    background-color: #211A1D;
+    color: $white;
+    padding: 1rem;
+}

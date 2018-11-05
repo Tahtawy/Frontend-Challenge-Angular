@@ -1,0 +1,78 @@
+@import "../base";
+
+.main {
+    min-height: 100vh!important;
+    height: auto;
+}
+
+/* Start Introduction Style */
+.intro {
+    @extend .text-center;
+    @include make-col-ready();
+    @include media-breakpoint-up(xl){
+        @include make-col(12, 12);
+    }
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+
+    &__title {
+        @extend .text-capitalize;
+        margin-bottom: 2rem;
+    }
+
+    &__paragraph {
+        @extend .lead;
+    }
+}
+/* End introduction Style */
+
+/* Start Details Style */
+.details {
+    @extend .text-center;
+    @include make-col-ready();
+    @include media-breakpoint-up(xl){
+        @include make-col(12, 12);
+    }
+    background-color: $white;
+    box-shadow: 0px -2px 15px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+    padding: 0;
+
+    &__section {
+        display: flex;
+    }
+
+    &__image {
+        @include make-col-ready();
+        @include media-breakpoint-up(xl){
+            @include make-col(6, 12);
+        }
+        height: 340px;
+        object-fit: cover;
+        padding: 0;
+    }
+
+    &__article {
+        @include make-col-ready();
+        @include media-breakpoint-up(xl){
+            @include make-col(6, 12);
+        }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        padding: 2rem;
+    }
+
+    &__title {
+        @extend .text-capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    &__paragraph {
+        line-height: 2.2rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
+/* End Details Style */

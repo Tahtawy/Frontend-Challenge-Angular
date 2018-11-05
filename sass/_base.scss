@@ -1,0 +1,29 @@
+/* 
+ * Bootstrap Framework
+ */
+
+/* Bootstrap */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* Variables */
+$box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+$card-border-radius: 2px;
+
+/* Global */
+@import "./global-style/root";
+@import "./global-style/body";
+@import "./global-style/scrollbar";
+@import "./global-style/section";
+@import "./global-style/main";
+@import "./global-style/div";
+@import "./global-style/p";
+@import "./global-style/a";
+@import "./global-style/button";
+@import "./global-style/span";
+
+
+/* Layout */
+@import "./layout/grid";
+@import "./layout/containers";
+@import "./layout/navigation-bar";
+@import "./layout/footer";

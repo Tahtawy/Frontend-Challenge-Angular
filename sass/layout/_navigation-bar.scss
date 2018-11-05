@@ -1,0 +1,48 @@
+@import "../../node_modules/bootstrap/scss/navbar";
+
+.navigation-bar {
+    @extend .navbar, .navbar-expand-lg, .navbar-light ;
+    background-color: $blue;
+    position: fixed !important;
+    width: 100%;
+    z-index: 2;
+
+    &__logo {
+        @extend .navbar-brand;
+        color: rgba(#FFF, .9)!important;
+    }
+
+    &__image {
+        @extend .d-inline-block, .align-top ;
+        height: auto;
+        width: 40px;
+    }
+
+    &__toggler {
+        @extend .navbar-toggler ;
+    }
+}
+
+.navbar-collapse {
+    @include media-breakpoint-up(lg) {
+        justify-content: flex-end;
+    }
+}
+
+.navigation-list {
+    @extend .navbar-nav ;
+
+    &__link {
+        @extend .nav-link ;
+        color: rgba(#FFF, .75) !important;
+        font-weight: bold;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    &--active {
+        a{
+            color: rgba(#FFF, 0.9)!important;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <!-- Roboto Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+
+    <!-- Page Style -->
+    <link rel="stylesheet" href="./css/pages/home.css">
+
+</head>
+<body>
+
+    <!-- Start Navigation Bar -->
+    <nav class="navigation-bar">
+
+        <a href="#" class="navigation-bar__logo">
+            <img src="./images/logo.png" alt="logo-image" class="navigation-bar__image">
+            <strong>Git</strong>Hub
+        </a>
+
+        <button class="navigation-bar__toggler" type="button" data-toggle="collapse" data-target="#collapseArea" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="collapseArea" class="navbar-collapse collapse">
+            <ul class="navigation-list">
+                <li class="navigation-list__item navigation-list--active">
+                    <a href="" class="navigation-list__link">Home</a>
+                </li>
+                <li class="navigation-list__item">
+                    <a href="" class="navigation-list__link">Users</a>
+                </li>
+                <li class="navigation-list__item">
+                    <a href="" class="navigation-list__link">About</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav> 
+    <!-- End Navigation Bar -->
+
+    <!-- Start Main Section -->
+    <main class="main">
+
+        <!-- Start video Section -->
+        <div class="welcome">
+            <h1 class="welcome__title">Welcome</h1>
+            <p class="welcome__p">we build awesome things</p>
+            <iframe class="welcome__video" src="https://player.vimeo.com/video/143044310?title=0&byline=0&portrait=0" width="700" height="394" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <!-- End video Section -->
+
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Start Footer Section -->
+    <footer class="footer">
+        copyright &copy;2018
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Scripts -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+.main {
+    @include make-row;
+    background-color: #EDF2F5;
+    height: 100vh;
+    padding: 5rem 2rem 1rem;
+}
