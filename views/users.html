@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="githubApp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,13 @@
     <script src="../node_modules/angular/angular.min.js"></script>
 
     <!-- Angular Development Files -->
-    <script src="../scripts/app.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers/MainController.js"></script>
+    <script src="../js/controllers/SidebarController.js"></script>
+    <script src="../js/services/GithubService.js"></script>
 
 </head>
 <body>
-
     <!-- Start Navigation Bar -->
     <nav class="navigation-bar">
 
@@ -50,40 +52,20 @@
         
     </nav> 
     <!-- End Navigation Bar -->
-
-    <main class="main">
+    
+    <main class="main" ng-app="githubApp" ng-controller="MainController">
         
         <!-- Start Sidebar -->
-        <aside class="sidebar">
-
+        <aside class="sidebar" ng-controller="SidebarController">
+            
             <div class="sidebar__title">
                 <h3 class="sidebar__h3">users list</h3>
             </div>
 
             <ul class="sidebar__users-list">
-                <li class="sidebar__user-item sidebar--active-user">
-                    <img src="../images/avatar.png" alt="user-image" class="sidebar__user-image">
-                    <span class="sidebar__user-name">mohammed galal</span>
-                </li>
-                <li class="sidebar__user-item">
-                    <img src="../images/avatar2.png" alt="user-image" class="sidebar__user-image">
-                    <span class="sidebar__user-name">mohammed galal</span>
-                </li>
-                <li class="sidebar__user-item">
-                    <img src="../images/avatar3.jpeg" alt="user-image" class="sidebar__user-image">
-                    <span class="sidebar__user-name">mohammed galal</span>
-                </li>
-                <li class="sidebar__user-item">
-                    <img src="../images/avatar4.jpeg" alt="user-image" class="sidebar__user-image">
-                    <span class="sidebar__user-name">mohammed galal</span>
-                </li>
-                <li class="sidebar__user-item">
-                    <img src="../images/avatar5.jpeg" alt="user-image" class="sidebar__user-image">
-                    <span class="sidebar__user-name">mohammed galal</span>
-                </li>
-                <li class="sidebar__user-item">
-                    <img src="../images/avatar6.jpeg" alt="user-image" class="sidebar__user-image">
-                    <span class="sidebar__user-name">mohammed galal</span>
+                <li class="sidebar__user-item" ng-repeat="user in users">
+                    <img ng-src="{{ user.avatar_url }}" alt="user-image" class="sidebar__user-image">
+                    <span class="sidebar__user-name">{{ user.login }}</span>
                 </li>
             </ul>
 
