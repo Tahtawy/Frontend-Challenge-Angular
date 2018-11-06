@@ -54,7 +54,6 @@
     <!-- End Navigation Bar -->
     
     <main class="main" ng-app="githubApp" ng-controller="MainController">
-        
         <!-- Start Sidebar -->
         <aside class="sidebar" ng-controller="SidebarController">
             
@@ -63,7 +62,7 @@
             </div>
 
             <ul class="sidebar__users-list">
-                <li class="sidebar__user-item" ng-repeat="user in users">
+                <li class="sidebar__user-item" ng-class="{ 'sidebar--active-user': currentUser.login === user.login}" ng-repeat="user in users">
                     <img ng-src="{{ user.avatar_url }}" alt="user-image" class="sidebar__user-image">
                     <span class="sidebar__user-name">{{ user.login }}</span>
                 </li>
@@ -84,10 +83,10 @@
             </div>
 
             <div class="user-details__body">
-                <img src="../images/avatar.png" alt="user-details-avatar" class="user-details__image">
+                <img ng-src="{{ currentUser.avatar_url }}" alt="user-details-avatar" class="user-details__image">
                 <div class="name-and-id">
-                    <p class="user-details__name">mohammed galal</p>
-                    <em class="user-details__id">@id:12345</em>
+                    <p class="user-details__name">{{ currentUser.login }}</p>
+                    <em class="user-details__id">@id:{{ currentUser.id }}</em>
                 </div>
                 <div class="user-details__email">
                     <label class="user-details__label">email:</label>
@@ -95,7 +94,7 @@
                 </div>
                 <div class="user-details__created-at">
                     <label class="user-details__label">created at:</label>
-                    <span class="user-details__value">2012-06-07</span>
+                    <span class="user-details__value">{{ currentUser.created_at | date }} at {{ currentUser.created_at | date:'mediumTime' }}</span>
                 </div>
             </div>
 
