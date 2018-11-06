@@ -2,12 +2,12 @@
 
     var github = function ($http) {
         
-        var currentUser = {};
+        var currentUser;
 
         var getUsers = function (firstUser) {
             return $http.get('https://api.github.com/users').then(function (response) {
                 if (firstUser) {
-                    return response.data[0].login;
+                    return response.data[0].login; // First User Login
                 }
                 return response.data; // All Users
             });

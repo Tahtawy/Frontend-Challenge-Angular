@@ -20,6 +20,7 @@
     <script src="../js/app.js"></script>
     <script src="../js/controllers/MainController.js"></script>
     <script src="../js/controllers/SidebarController.js"></script>
+    <script src="../js/controllers/UserDetailsController.js"></script>
     <script src="../js/services/GithubService.js"></script>
 
 </head>
@@ -53,7 +54,7 @@
     </nav> 
     <!-- End Navigation Bar -->
     
-    <main class="main" ng-app="githubApp" ng-controller="MainController">
+    <main class="main" ng-app="githubApp">
         <!-- Start Sidebar -->
         <aside class="sidebar" ng-controller="SidebarController">
             
@@ -62,7 +63,10 @@
             </div>
 
             <ul class="sidebar__users-list">
-                <li class="sidebar__user-item" ng-class="{ 'sidebar--active-user': currentUser.login === user.login}" ng-repeat="user in users">
+                <li class="sidebar__user-item"
+                    ng-class="{ 'sidebar--active-user': currentUser.login === user.login}"
+                    ng-repeat="user in userList"
+                    ng-click="onClickUserItem(user.login)">
                     <img ng-src="{{ user.avatar_url }}" alt="user-image" class="sidebar__user-image">
                     <span class="sidebar__user-name">{{ user.login }}</span>
                 </li>
@@ -76,8 +80,7 @@
         <!-- End Sidebar -->
 
         <!-- Start User's Details -->
-        <section class="user-details">
-
+        <section class="user-details" ng-controller="UserDetailsController">
             <div class="user-details__title">
                 <h3 class="user-details__h3">user's details</h3>
             </div>
