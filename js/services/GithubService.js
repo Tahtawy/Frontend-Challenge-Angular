@@ -1,21 +1,21 @@
 (function () {
 
-    var github = function ($http) {
+    var github = function ($http, Restangular) {
         
         var currentUser;
 
         var getUsers = function (firstUser) {
-            return $http.get('https://api.github.com/users').then(function (response) {
+            return Restangular.all('users').getList().then(function (response) {
                 if (firstUser) {
-                    return response.data[0].login; // First User Login
+                    return response[0].login; // First User Login
                 }
-                return response.data; // All Users
+                return response; // All Users
             });
         };
 
         var setCurrentUser = function (login) {
-            currentUser = $http.get('https://api.github.com/users/'+login).then(function (response) {
-                return response.data;
+            currentUser = Restangular.one('users', login).get().then(function (response) {
+                return response;
             });
         }
 
